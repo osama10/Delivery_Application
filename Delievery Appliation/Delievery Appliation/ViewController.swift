@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let manager = AlamofireManager()
+        let deliveryRequest = DeliveryRequest(offset: 1, limit: 20)
+        manager.request(request: deliveryRequest) { (result) in
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

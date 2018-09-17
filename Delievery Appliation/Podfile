@@ -1,0 +1,12 @@
+platform :ios, '10.0'
+
+target 'Delievery Appliation' do
+
+  use_frameworks!
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+	pod 'Alamofire', '~> 4.2.0'
+    pod 'ObjectMapper', '~> 3.3'
+
+end
+
