@@ -17,7 +17,7 @@ class DeliveryResponse : Response {
     }
     func map() -> [Mappable] {
         let deleiveryJSON = self.data as! [[String : AnyObject]]
-        let data = Mapper<Delivery>().mapArray(JSONArray: deleiveryJSON)
+        let data = Mapper<DeliveryDTO>().mapArray(JSONArray: deleiveryJSON)
         print("count : \(data.count)")
         return data
     }

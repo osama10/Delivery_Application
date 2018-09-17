@@ -21,8 +21,8 @@
 		4AFCB396214F8750008F5B9A /* BaseUrl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB395214F8750008F5B9A /* BaseUrl+Extension.swift */; };
 		4AFCB398214F88AE008F5B9A /* API+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB397214F88AE008F5B9A /* API+Extension.swift */; };
 		4AFCB39A214F8939008F5B9A /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB399214F8939008F5B9A /* RequestProvider.swift */; };
-		4AFCB3A0214F8AD0008F5B9A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB39F214F8AD0008F5B9A /* Location.swift */; };
-		4AFCB3A2214F8B65008F5B9A /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3A1214F8B65008F5B9A /* Delivery.swift */; };
+		4AFCB3A0214F8AD0008F5B9A /* LocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB39F214F8AD0008F5B9A /* LocationDTO.swift */; };
+		4AFCB3A2214F8B65008F5B9A /* DeliveryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3A1214F8B65008F5B9A /* DeliveryDTO.swift */; };
 		4AFCB3A4214F8BF8008F5B9A /* DeliveryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3A3214F8BF8008F5B9A /* DeliveryRequest.swift */; };
 		4AFCB3A9214FAB3A008F5B9A /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3A8214FAB3A008F5B9A /* AlamofireManager.swift */; };
 		4AFCB3AB214FB027008F5B9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3AA214FB027008F5B9A /* NetworkManager.swift */; };
@@ -33,6 +33,8 @@
 		4AFCB3C4214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C0214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift */; };
 		4AFCB3C5214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C1214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift */; };
 		4AFCB3C6214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C2214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift */; };
+		4AFCB3C9215027FD008F5B9A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C8215027FD008F5B9A /* Repository.swift */; };
+		4AFCB3CB215028DC008F5B9A /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3CA215028DC008F5B9A /* Predicate.swift */; };
 		AD72C4F8067248A28D72E195 /* Pods_Delievery_Appliation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +68,8 @@
 		4AFCB395214F8750008F5B9A /* BaseUrl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseUrl+Extension.swift"; sourceTree = "<group>"; };
 		4AFCB397214F88AE008F5B9A /* API+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Extension.swift"; sourceTree = "<group>"; };
 		4AFCB399214F8939008F5B9A /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
-		4AFCB39F214F8AD0008F5B9A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		4AFCB3A1214F8B65008F5B9A /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
+		4AFCB39F214F8AD0008F5B9A /* LocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDTO.swift; sourceTree = "<group>"; };
+		4AFCB3A1214F8B65008F5B9A /* DeliveryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDTO.swift; sourceTree = "<group>"; };
 		4AFCB3A3214F8BF8008F5B9A /* DeliveryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequest.swift; sourceTree = "<group>"; };
 		4AFCB3A8214FAB3A008F5B9A /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		4AFCB3AA214FB027008F5B9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		4AFCB3C0214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AFCB3C1214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeliveryModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4AFCB3C2214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeliveryModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AFCB3C8215027FD008F5B9A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4AFCB3CA215028DC008F5B9A /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		56301AEE276E14674FB89475 /* Pods-Delievery Appliation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delievery Appliation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delievery Appliation/Pods-Delievery Appliation.release.xcconfig"; sourceTree = "<group>"; };
 		EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delievery_Appliation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,8 +205,8 @@
 		4AFCB39E214F8AA7008F5B9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4AFCB39F214F8AD0008F5B9A /* Location.swift */,
-				4AFCB3A1214F8B65008F5B9A /* Delivery.swift */,
+				4AFCB39F214F8AD0008F5B9A /* LocationDTO.swift */,
+				4AFCB3A1214F8B65008F5B9A /* DeliveryDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 		4AFCB3BD214FE78E008F5B9A /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB3C7215027EC008F5B9A /* Contract */,
 				4AFCB3BE214FE79A008F5B9A /* Model */,
 			);
 			path = DBManager;
@@ -239,8 +244,17 @@
 				4AFCB3C0214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift */,
 				4AFCB3C1214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift */,
 				4AFCB3C2214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift */,
+				4AFCB3CA215028DC008F5B9A /* Predicate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFCB3C7215027EC008F5B9A /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3C8215027FD008F5B9A /* Repository.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		5369060FAE403B97C043E6E9 /* Pods */ = {
@@ -429,20 +443,22 @@
 				4AFCB3C5214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift in Sources */,
 				4AFCB396214F8750008F5B9A /* BaseUrl+Extension.swift in Sources */,
 				4AFCB3C6214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift in Sources */,
-				4AFCB3A2214F8B65008F5B9A /* Delivery.swift in Sources */,
+				4AFCB3A2214F8B65008F5B9A /* DeliveryDTO.swift in Sources */,
 				4AFCB36A214F84B9008F5B9A /* ViewController.swift in Sources */,
 				4AFCB370214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld in Sources */,
 				4AFCB38E214F863A008F5B9A /* BaseUrl.swift in Sources */,
 				4AFCB3C4214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift in Sources */,
+				4AFCB3C9215027FD008F5B9A /* Repository.swift in Sources */,
 				4AFCB3B1214FBBAD008F5B9A /* DeliveryResponse.swift in Sources */,
 				4AFCB398214F88AE008F5B9A /* API+Extension.swift in Sources */,
-				4AFCB3A0214F8AD0008F5B9A /* Location.swift in Sources */,
+				4AFCB3A0214F8AD0008F5B9A /* LocationDTO.swift in Sources */,
 				4AFCB392214F8690008F5B9A /* NetworkResult.swift in Sources */,
 				4AFCB3AD214FB557008F5B9A /* Response.swift in Sources */,
 				4AFCB3A4214F8BF8008F5B9A /* DeliveryRequest.swift in Sources */,
 				4AFCB39A214F8939008F5B9A /* RequestProvider.swift in Sources */,
 				4AFCB394214F86B4008F5B9A /* Request.swift in Sources */,
 				4AFCB368214F84B9008F5B9A /* AppDelegate.swift in Sources */,
+				4AFCB3CB215028DC008F5B9A /* Predicate.swift in Sources */,
 				4AFCB3A9214FAB3A008F5B9A /* AlamofireManager.swift in Sources */,
 				4AFCB390214F8662008F5B9A /* API.swift in Sources */,
 				4AFCB3C3214FE7BB008F5B9A /* LocationModel+CoreDataClass.swift in Sources */,

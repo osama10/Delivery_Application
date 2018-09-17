@@ -19,8 +19,10 @@ class AlamofireManager : NetworkManager {
        Alamofire.request(
         request.request.api.url,
         method: self.getHTTPMethod(method: request.request.method),
-        parameters: request.request.params, encoding: JSONEncoding.default,
-        headers: request.request.headers)
+        parameters: request.request.params,
+        encoding: URLEncoding.default,
+        headers: request.request.headers
+        )
         .responseJSON
         { (response) in
             if let error = response.result.error {

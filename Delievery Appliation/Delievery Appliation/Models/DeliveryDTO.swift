@@ -9,11 +9,11 @@
 import Foundation
 import ObjectMapper
 
-struct Delivery : Mappable {
+struct DeliveryDTO : Mappable {
     var id : Int?
     var description : String?
     var imageUrl : String?
-    var location : Location?
+    var location : LocationDTO?
     
     
     init?(map: Map) {

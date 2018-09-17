@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Location : Mappable {
+struct LocationDTO : Mappable {
     var lat : Double?
     var lng : Double?
     var address : String?

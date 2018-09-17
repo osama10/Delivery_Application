@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let manager = AlamofireManager()
-        let deliveryRequest = DeliveryRequest(offset: 1, limit: 20)
+        let deliveryRequest = DeliveryRequest(offset: 60, limit: 5)
         manager.request(request: deliveryRequest) { (result) in
             
         }
