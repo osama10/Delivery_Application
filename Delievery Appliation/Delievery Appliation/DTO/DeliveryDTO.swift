@@ -15,9 +15,15 @@ struct DeliveryDTO : Mappable {
     var imageUrl : String?
     var location : LocationDTO?
     
-    
     init?(map: Map) {
         
+    }
+   
+    init(id : Int, description : String, imageUrl : String, location : LocationDTO) {
+        self.id = id
+        self.description = description
+        self.imageUrl = imageUrl
+        self.location = location
     }
     
     mutating func mapping(map: Map) {

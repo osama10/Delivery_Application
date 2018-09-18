@@ -17,7 +17,7 @@ extension DeliveryModel {
         return NSFetchRequest<DeliveryModel>(entityName: "DeliveryModel")
     }
 
-    @NSManaged public var id: Int64
+    @NSManaged public var id: String?
     @NSManaged public var desc: String?
     @NSManaged public var imageUrl: String?
     @NSManaged public var location: LocationModel?

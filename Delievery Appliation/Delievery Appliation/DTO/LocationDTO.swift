@@ -18,6 +18,12 @@ struct LocationDTO : Mappable {
         
     }
     
+    init(lat : Double, lng : Double, address : String) {
+        self.lat = lat
+        self.lng = lng
+        self.address = address
+    }
+    
     mutating func mapping(map: Map) {
         lat <- map["lat"]
         lng <- map["lng"]

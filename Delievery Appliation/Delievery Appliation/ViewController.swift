@@ -7,16 +7,19 @@
 //
 
 import UIKit
-
+import CoreData
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let manager = AlamofireManager()
-        let deliveryRequest = DeliveryRequest(offset: 60, limit: 5)
-        manager.request(request: deliveryRequest) { (result) in
-            
-        }
+//        let manager : NetworkManager = AlamofireManager()
+//        let deliveryRequest = DeliveryRequest(offset: 60, limit: 5)
+//        manager.request(request: deliveryRequest) { (result) in
+//
+//        }
+//        let dbManager  = CoreDataManger(context: NSManagedObjectContext())
+//        var temp   = DeliveryRepository<CoreDataManger>(dbManager: dbManager)
+//        temp = MockDelivery(dbManager: dbManager)
     }
 
     override func didReceiveMemoryWarning() {

@@ -35,6 +35,10 @@
 		4AFCB3C6214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C2214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift */; };
 		4AFCB3C9215027FD008F5B9A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3C8215027FD008F5B9A /* Repository.swift */; };
 		4AFCB3CB215028DC008F5B9A /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3CA215028DC008F5B9A /* Predicate.swift */; };
+		4AFCB3CD21503108008F5B9A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3CC21503108008F5B9A /* DBManager.swift */; };
+		4AFCB3D021503323008F5B9A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3CF21503323008F5B9A /* CoreDataManager.swift */; };
+		4AFCB3D321503B10008F5B9A /* DeliveryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3D221503B10008F5B9A /* DeliveryRepository.swift */; };
+		4AFCB3D721509989008F5B9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3D621509989008F5B9A /* Extensions.swift */; };
 		AD72C4F8067248A28D72E195 /* Pods_Delievery_Appliation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +86,10 @@
 		4AFCB3C2214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeliveryModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AFCB3C8215027FD008F5B9A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		4AFCB3CA215028DC008F5B9A /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		4AFCB3CC21503108008F5B9A /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		4AFCB3CF21503323008F5B9A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4AFCB3D221503B10008F5B9A /* DeliveryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRepository.swift; sourceTree = "<group>"; };
+		4AFCB3D621509989008F5B9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		56301AEE276E14674FB89475 /* Pods-Delievery Appliation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delievery Appliation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delievery Appliation/Pods-Delievery Appliation.release.xcconfig"; sourceTree = "<group>"; };
 		EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delievery_Appliation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,8 +136,10 @@
 		4AFCB366214F84B9008F5B9A /* Delievery Appliation */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB3D521509959008F5B9A /* Extensions */,
+				4AFCB3D421509941008F5B9A /* Protocols */,
 				4AFCB3BD214FE78E008F5B9A /* DBManager */,
-				4AFCB39E214F8AA7008F5B9A /* Models */,
+				4AFCB39E214F8AA7008F5B9A /* DTO */,
 				4AFCB38A214F84D3008F5B9A /* Networking */,
 				4AFCB367214F84B9008F5B9A /* AppDelegate.swift */,
 				4AFCB369214F84B9008F5B9A /* ViewController.swift */,
@@ -202,13 +212,13 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
-		4AFCB39E214F8AA7008F5B9A /* Models */ = {
+		4AFCB39E214F8AA7008F5B9A /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				4AFCB39F214F8AD0008F5B9A /* LocationDTO.swift */,
 				4AFCB3A1214F8B65008F5B9A /* DeliveryDTO.swift */,
 			);
-			path = Models;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		4AFCB3A7214FAB1A008F5B9A /* Extension */ = {
@@ -231,6 +241,8 @@
 		4AFCB3BD214FE78E008F5B9A /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB3D121503AE2008F5B9A /* Repositories */,
+				4AFCB3CE2150330F008F5B9A /* Manager */,
 				4AFCB3C7215027EC008F5B9A /* Contract */,
 				4AFCB3BE214FE79A008F5B9A /* Model */,
 			);
@@ -253,8 +265,40 @@
 			isa = PBXGroup;
 			children = (
 				4AFCB3C8215027FD008F5B9A /* Repository.swift */,
+				4AFCB3CC21503108008F5B9A /* DBManager.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		4AFCB3CE2150330F008F5B9A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3CF21503323008F5B9A /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFCB3D121503AE2008F5B9A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3D221503B10008F5B9A /* DeliveryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4AFCB3D421509941008F5B9A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4AFCB3D521509959008F5B9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3D621509989008F5B9A /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5369060FAE403B97C043E6E9 /* Pods */ = {
@@ -439,12 +483,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFCB3CD21503108008F5B9A /* DBManager.swift in Sources */,
 				4AFCB3AF214FB5D7008F5B9A /* NetworkError.swift in Sources */,
 				4AFCB3C5214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift in Sources */,
 				4AFCB396214F8750008F5B9A /* BaseUrl+Extension.swift in Sources */,
 				4AFCB3C6214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift in Sources */,
 				4AFCB3A2214F8B65008F5B9A /* DeliveryDTO.swift in Sources */,
 				4AFCB36A214F84B9008F5B9A /* ViewController.swift in Sources */,
+				4AFCB3D321503B10008F5B9A /* DeliveryRepository.swift in Sources */,
 				4AFCB370214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld in Sources */,
 				4AFCB38E214F863A008F5B9A /* BaseUrl.swift in Sources */,
 				4AFCB3C4214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift in Sources */,
@@ -458,11 +504,13 @@
 				4AFCB39A214F8939008F5B9A /* RequestProvider.swift in Sources */,
 				4AFCB394214F86B4008F5B9A /* Request.swift in Sources */,
 				4AFCB368214F84B9008F5B9A /* AppDelegate.swift in Sources */,
+				4AFCB3D021503323008F5B9A /* CoreDataManager.swift in Sources */,
 				4AFCB3CB215028DC008F5B9A /* Predicate.swift in Sources */,
 				4AFCB3A9214FAB3A008F5B9A /* AlamofireManager.swift in Sources */,
 				4AFCB390214F8662008F5B9A /* API.swift in Sources */,
 				4AFCB3C3214FE7BB008F5B9A /* LocationModel+CoreDataClass.swift in Sources */,
 				4AFCB3AB214FB027008F5B9A /* NetworkManager.swift in Sources */,
+				4AFCB3D721509989008F5B9A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
