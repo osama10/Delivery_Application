@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4AFCB368214F84B9008F5B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB367214F84B9008F5B9A /* AppDelegate.swift */; };
-		4AFCB36A214F84B9008F5B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB369214F84B9008F5B9A /* ViewController.swift */; };
+		4AFCB36A214F84B9008F5B9A /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB369214F84B9008F5B9A /* DeliveryListViewController.swift */; };
 		4AFCB36D214F84B9008F5B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFCB36B214F84B9008F5B9A /* Main.storyboard */; };
 		4AFCB370214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB36E214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld */; };
 		4AFCB372214F84BC008F5B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AFCB371214F84BC008F5B9A /* Assets.xcassets */; };
@@ -39,6 +39,10 @@
 		4AFCB3D021503323008F5B9A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3CF21503323008F5B9A /* CoreDataManager.swift */; };
 		4AFCB3D321503B10008F5B9A /* DeliveryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3D221503B10008F5B9A /* DeliveryRepository.swift */; };
 		4AFCB3D721509989008F5B9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3D621509989008F5B9A /* Extensions.swift */; };
+		4AFCB3E12150C656008F5B9A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3E02150C656008F5B9A /* Protocols.swift */; };
+		4AFCB3E42150D4C7008F5B9A /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3E32150D4C7008F5B9A /* ViewsFactory.swift */; };
+		4AFCB3E62150FF7A008F5B9A /* DeliveryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3E52150FF7A008F5B9A /* DeliveryListView.swift */; };
+		4AFCB3E9215108B7008F5B9A /* DeliveryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB3E8215108B7008F5B9A /* DeliveryListTableViewCell.swift */; };
 		AD72C4F8067248A28D72E195 /* Pods_Delievery_Appliation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +60,7 @@
 		4385A00B03F75E7BEDDC20A2 /* Pods-Delievery Appliation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delievery Appliation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delievery Appliation/Pods-Delievery Appliation.debug.xcconfig"; sourceTree = "<group>"; };
 		4AFCB364214F84B9008F5B9A /* Delievery Appliation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delievery Appliation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFCB367214F84B9008F5B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AFCB369214F84B9008F5B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AFCB369214F84B9008F5B9A /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
 		4AFCB36C214F84B9008F5B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AFCB36F214F84B9008F5B9A /* Delievery_Appliation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delievery_Appliation.xcdatamodel; sourceTree = "<group>"; };
 		4AFCB371214F84BC008F5B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +94,10 @@
 		4AFCB3CF21503323008F5B9A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		4AFCB3D221503B10008F5B9A /* DeliveryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRepository.swift; sourceTree = "<group>"; };
 		4AFCB3D621509989008F5B9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4AFCB3E02150C656008F5B9A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		4AFCB3E32150D4C7008F5B9A /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
+		4AFCB3E52150FF7A008F5B9A /* DeliveryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListView.swift; sourceTree = "<group>"; };
+		4AFCB3E8215108B7008F5B9A /* DeliveryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListTableViewCell.swift; sourceTree = "<group>"; };
 		56301AEE276E14674FB89475 /* Pods-Delievery Appliation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delievery Appliation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delievery Appliation/Pods-Delievery Appliation.release.xcconfig"; sourceTree = "<group>"; };
 		EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delievery_Appliation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,13 +144,14 @@
 		4AFCB366214F84B9008F5B9A /* Delievery Appliation */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB39E214F8AA7008F5B9A /* DTO */,
+				4AFCB3E22150D4A9008F5B9A /* Factories */,
 				4AFCB3D521509959008F5B9A /* Extensions */,
 				4AFCB3D421509941008F5B9A /* Protocols */,
 				4AFCB3BD214FE78E008F5B9A /* DBManager */,
-				4AFCB39E214F8AA7008F5B9A /* DTO */,
 				4AFCB38A214F84D3008F5B9A /* Networking */,
+				4AFCB3D92150C469008F5B9A /* Deliveries */,
 				4AFCB367214F84B9008F5B9A /* AppDelegate.swift */,
-				4AFCB369214F84B9008F5B9A /* ViewController.swift */,
 				4AFCB36B214F84B9008F5B9A /* Main.storyboard */,
 				4AFCB371214F84BC008F5B9A /* Assets.xcassets */,
 				4AFCB373214F84BC008F5B9A /* LaunchScreen.storyboard */,
@@ -289,6 +298,7 @@
 		4AFCB3D421509941008F5B9A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB3E02150C656008F5B9A /* Protocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -299,6 +309,80 @@
 				4AFCB3D621509989008F5B9A /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4AFCB3D92150C469008F5B9A /* Deliveries */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3DD2150C4B5008F5B9A /* Service */,
+				4AFCB3DC2150C4A7008F5B9A /* Model */,
+				4AFCB3DB2150C496008F5B9A /* ViewModel */,
+				4AFCB3DA2150C47E008F5B9A /* View */,
+			);
+			path = Deliveries;
+			sourceTree = "<group>";
+		};
+		4AFCB3DA2150C47E008F5B9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3DF2150C549008F5B9A /* ViewControllers */,
+				4AFCB3DE2150C540008F5B9A /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AFCB3DB2150C496008F5B9A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4AFCB3DC2150C4A7008F5B9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFCB3DD2150C4B5008F5B9A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4AFCB3DE2150C540008F5B9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3E721510894008F5B9A /* TableViewCells */,
+				4AFCB3E52150FF7A008F5B9A /* DeliveryListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AFCB3DF2150C549008F5B9A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB369214F84B9008F5B9A /* DeliveryListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4AFCB3E22150D4A9008F5B9A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3E32150D4C7008F5B9A /* ViewsFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		4AFCB3E721510894008F5B9A /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCB3E8215108B7008F5B9A /* DeliveryListTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		5369060FAE403B97C043E6E9 /* Pods */ = {
@@ -489,7 +573,8 @@
 				4AFCB396214F8750008F5B9A /* BaseUrl+Extension.swift in Sources */,
 				4AFCB3C6214FE7BB008F5B9A /* DeliveryModel+CoreDataProperties.swift in Sources */,
 				4AFCB3A2214F8B65008F5B9A /* DeliveryDTO.swift in Sources */,
-				4AFCB36A214F84B9008F5B9A /* ViewController.swift in Sources */,
+				4AFCB36A214F84B9008F5B9A /* DeliveryListViewController.swift in Sources */,
+				4AFCB3E42150D4C7008F5B9A /* ViewsFactory.swift in Sources */,
 				4AFCB3D321503B10008F5B9A /* DeliveryRepository.swift in Sources */,
 				4AFCB370214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld in Sources */,
 				4AFCB38E214F863A008F5B9A /* BaseUrl.swift in Sources */,
@@ -503,12 +588,15 @@
 				4AFCB3A4214F8BF8008F5B9A /* DeliveryRequest.swift in Sources */,
 				4AFCB39A214F8939008F5B9A /* RequestProvider.swift in Sources */,
 				4AFCB394214F86B4008F5B9A /* Request.swift in Sources */,
+				4AFCB3E62150FF7A008F5B9A /* DeliveryListView.swift in Sources */,
 				4AFCB368214F84B9008F5B9A /* AppDelegate.swift in Sources */,
 				4AFCB3D021503323008F5B9A /* CoreDataManager.swift in Sources */,
 				4AFCB3CB215028DC008F5B9A /* Predicate.swift in Sources */,
 				4AFCB3A9214FAB3A008F5B9A /* AlamofireManager.swift in Sources */,
+				4AFCB3E12150C656008F5B9A /* Protocols.swift in Sources */,
 				4AFCB390214F8662008F5B9A /* API.swift in Sources */,
 				4AFCB3C3214FE7BB008F5B9A /* LocationModel+CoreDataClass.swift in Sources */,
+				4AFCB3E9215108B7008F5B9A /* DeliveryListTableViewCell.swift in Sources */,
 				4AFCB3AB214FB027008F5B9A /* NetworkManager.swift in Sources */,
 				4AFCB3D721509989008F5B9A /* Extensions.swift in Sources */,
 			);
