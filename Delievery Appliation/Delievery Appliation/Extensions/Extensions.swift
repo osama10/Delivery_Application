@@ -53,6 +53,30 @@ extension UIScreen{
     }
 }
 
+extension UIColor {
+    static var primaryColor : UIColor{
+        return UIColor(red: 239/255, green: 102/255, blue: 47/255, alpha: 1.0)
+    }
+}
+
+extension UIFont{
+    static var navTitleFont : UIFont{
+       return UIFont.init(name: "AvenirNext-DemiBold", size: 22.0)!
+    }
+    
+    static var headingFont : UIFont{
+        return UIFont.init(name: "AvenirNext-DemiBold", size: 18.0)!
+    }
+    
+    static var generalTextFont : UIFont{
+        return UIFont.init(name: "AvenirNext-Regular", size: 16.0)!
+    }
+    
+    static var specialTextFont : UIFont{
+        return UIFont.init(name: "AvenirNext-DemiBold", size: 14.0)!
+
+    }
+}
 extension UIStoryboard {
     /**
      - Storyboard : enum for saving storyboard name
@@ -149,8 +173,6 @@ extension AlertsPresentable where Self : UIViewController {
         present(alertController, animated: true, completion: nil)
         
     }
-    
-    
 }
 
 extension ReusableView where Self : UIView {

@@ -27,7 +27,7 @@ class DeliveryListTableViewCell: UITableViewCell, Injectable {
         self.addDeliveryListView()
         self.deliveryListView.setBorders()
         self.deliveryListView.setDeliveryImageViewBorders()
-        self.deliveryListView.descriptionLabelFont  = UIFont.systemFont(ofSize: 16.0)
+        self.deliveryListView.descriptionLabelFont  = .generalTextFont
         self.selectionStyle = .none
     }
     

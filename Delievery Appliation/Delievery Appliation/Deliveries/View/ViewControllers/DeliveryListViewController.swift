@@ -13,7 +13,6 @@ class DeliveryListViewController: UIViewController, Injectable, AlertsPresentabl
     enum ReuseIdentifier : String{
         case deliveryList
         case showMore
-        
     }
     
     lazy var tableView : UITableView = {
@@ -105,6 +104,7 @@ extension DeliveryListViewController : UITableViewDataSource, UITableViewDelegat
             cell.inject(self.viewModel.getDeliveryListCellViewModel(of: indexPath.row))
             cell.populateData()
             cellToReturn = cell
+            
         }
         
         return cellToReturn

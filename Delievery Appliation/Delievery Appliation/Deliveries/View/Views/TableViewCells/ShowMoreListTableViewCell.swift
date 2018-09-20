@@ -26,7 +26,7 @@ class ShowMoreListTableViewCell: UITableViewCell, Injectable {
         self.addDeliveryListView()
         self.deliveryListView.setBorders()
         self.deliveryListView.setWidthOfImageView(width: 0.0)
-        self.deliveryListView.descriptionLabelFont  = UIFont.boldSystemFont(ofSize: 15.0)
+        self.deliveryListView.descriptionLabelFont  = .specialTextFont
         self.deliveryListView.descriptionLabelTextAlignment = .center
         self.selectionStyle = .none
     }

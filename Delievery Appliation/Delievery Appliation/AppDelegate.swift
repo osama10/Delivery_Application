@@ -62,6 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let listVC = DeliveryListViewController()
         listVC.inject(viewModel)
         let navigationController = UINavigationController.init(rootViewController: listVC)
+        navigationController.navigationBar.barTintColor = .primaryColor
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white,
+                                                                  .font : UIFont.navTitleFont]
+        navigationController.navigationBar.tintColor = .white
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
