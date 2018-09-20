@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 extension Int{
     var toString: String{
@@ -196,5 +197,20 @@ extension UIView {
     func makeViewCircular(borderWidth : CGFloat , borderColor : UIColor){
         self.addBorders(cornerRadius: self.frame.width/2, borderWidth: borderWidth, borderColor: borderColor)
     }
+}
+
+extension GMSMapView{
+     func setMarker(position : CLLocationCoordinate2D , title : String , snippet : String , image : String ){
+        let markerOrig = GMSMarker()
+        markerOrig.position = position
+        markerOrig.title = title
+        markerOrig.snippet = snippet
+        markerOrig.map = self
+        markerOrig.icon = UIImage(named: image)
+    }
     
+     func setCamera(location : CLLocationCoordinate2D , zoom : Float){
+        let camera = GMSCameraPosition.camera(withLatitude: (location.latitude), longitude: (location.longitude), zoom: zoom)
+        self.camera = camera
+    }
 }
