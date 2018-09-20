@@ -62,6 +62,16 @@
 		4AFCB4182153F906008F5B9A /* MapViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB4172153F906008F5B9A /* MapViewCellViewModel.swift */; };
 		4AFCB41A2153F92A008F5B9A /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB4192153F92A008F5B9A /* MapModel.swift */; };
 		4AFCB41C2153FAAF008F5B9A /* MapViewCellViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB41B2153FAAF008F5B9A /* MapViewCellViewModelImp.swift */; };
+		4AFCB41E21540149008F5B9A /* DeliveryDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB41D21540149008F5B9A /* DeliveryDetailTableViewCell.swift */; };
+		4AFCB42021540167008F5B9A /* DeliveryDetailViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB41F21540167008F5B9A /* DeliveryDetailViewList.swift */; };
+		4AFCB4222154110D008F5B9A /* DeliveryDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB4212154110D008F5B9A /* DeliveryDetailCellViewModel.swift */; };
+		4AFCB42421541123008F5B9A /* DetailViewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42321541123008F5B9A /* DetailViewListModel.swift */; };
+		4AFCB42621541202008F5B9A /* DeliveryDetailCellViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42521541202008F5B9A /* DeliveryDetailCellViewModelImp.swift */; };
+		4AFCB4282154129F008F5B9A /* DeliveryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB4272154129F008F5B9A /* DeliveryDetailViewController.swift */; };
+		4AFCB42A21541626008F5B9A /* DeliveryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42921541626008F5B9A /* DeliveryDetailViewModel.swift */; };
+		4AFCB42C215416F0008F5B9A /* DeliveryDetailViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42B215416F0008F5B9A /* DeliveryDetailViewModelImp.swift */; };
+		4AFCB42E215419CE008F5B9A /* DetailViewListModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42D215419CE008F5B9A /* DetailViewListModelBuilder.swift */; };
+		4AFCB43021541C66008F5B9A /* MapModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB42F21541C66008F5B9A /* MapModelBuilder.swift */; };
 		AD72C4F8067248A28D72E195 /* Pods_Delievery_Appliation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +146,16 @@
 		4AFCB4172153F906008F5B9A /* MapViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCellViewModel.swift; sourceTree = "<group>"; };
 		4AFCB4192153F92A008F5B9A /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		4AFCB41B2153FAAF008F5B9A /* MapViewCellViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCellViewModelImp.swift; sourceTree = "<group>"; };
+		4AFCB41D21540149008F5B9A /* DeliveryDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4AFCB41F21540167008F5B9A /* DeliveryDetailViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewList.swift; sourceTree = "<group>"; };
+		4AFCB4212154110D008F5B9A /* DeliveryDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailCellViewModel.swift; sourceTree = "<group>"; };
+		4AFCB42321541123008F5B9A /* DetailViewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewListModel.swift; sourceTree = "<group>"; };
+		4AFCB42521541202008F5B9A /* DeliveryDetailCellViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailCellViewModelImp.swift; sourceTree = "<group>"; };
+		4AFCB4272154129F008F5B9A /* DeliveryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewController.swift; sourceTree = "<group>"; };
+		4AFCB42921541626008F5B9A /* DeliveryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewModel.swift; sourceTree = "<group>"; };
+		4AFCB42B215416F0008F5B9A /* DeliveryDetailViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewModelImp.swift; sourceTree = "<group>"; };
+		4AFCB42D215419CE008F5B9A /* DetailViewListModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewListModelBuilder.swift; sourceTree = "<group>"; };
+		4AFCB42F21541C66008F5B9A /* MapModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModelBuilder.swift; sourceTree = "<group>"; };
 		56301AEE276E14674FB89475 /* Pods-Delievery Appliation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delievery Appliation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delievery Appliation/Pods-Delievery Appliation.release.xcconfig"; sourceTree = "<group>"; };
 		EF450E12F2FC78BBD18609B6 /* Pods_Delievery_Appliation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delievery_Appliation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -379,6 +399,8 @@
 				4AFCB4012152C577008F5B9A /* DeliveryListTableCellViewModelImp.swift */,
 				4AFCB4112153BC8A008F5B9A /* ShowMoreViewModelImp.swift */,
 				4AFCB41B2153FAAF008F5B9A /* MapViewCellViewModelImp.swift */,
+				4AFCB42521541202008F5B9A /* DeliveryDetailCellViewModelImp.swift */,
+				4AFCB42B215416F0008F5B9A /* DeliveryDetailViewModelImp.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -387,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				4AFCB4192153F92A008F5B9A /* MapModel.swift */,
+				4AFCB42321541123008F5B9A /* DetailViewListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				4AFCB369214F84B9008F5B9A /* DeliveryListViewController.swift */,
+				4AFCB4272154129F008F5B9A /* DeliveryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -429,6 +453,7 @@
 		4AFCB3E721510894008F5B9A /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB41D21540149008F5B9A /* DeliveryDetailTableViewCell.swift */,
 				4AFCB3E8215108B7008F5B9A /* DeliveryListTableViewCell.swift */,
 				4AFCB40D2153B81D008F5B9A /* ShowMoreListTableViewCell.swift */,
 				4AFCB4152153F737008F5B9A /* MapViewTableViewCell.swift */,
@@ -444,6 +469,8 @@
 				4AFCB3FF2152C015008F5B9A /* DeliveryListTableCellViewModel.swift */,
 				4AFCB40F2153BC54008F5B9A /* ShowMoreViewModel.swift */,
 				4AFCB4172153F906008F5B9A /* MapViewCellViewModel.swift */,
+				4AFCB4212154110D008F5B9A /* DeliveryDetailCellViewModel.swift */,
+				4AFCB42921541626008F5B9A /* DeliveryDetailViewModel.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -478,6 +505,8 @@
 			children = (
 				4AFCB4072153800F008F5B9A /* DeliveryServiceBuilder.swift */,
 				4AFCB40921538320008F5B9A /* DeliveryRepositoryBuilder.swift */,
+				4AFCB42D215419CE008F5B9A /* DetailViewListModelBuilder.swift */,
+				4AFCB42F21541C66008F5B9A /* MapModelBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -486,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				4AFCB3E52150FF7A008F5B9A /* DeliveryListView.swift */,
+				4AFCB41F21540167008F5B9A /* DeliveryDetailViewList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -675,7 +705,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AFCB3CD21503108008F5B9A /* DBManager.swift in Sources */,
+				4AFCB4282154129F008F5B9A /* DeliveryDetailViewController.swift in Sources */,
 				4AFCB3AF214FB5D7008F5B9A /* NetworkError.swift in Sources */,
+				4AFCB41E21540149008F5B9A /* DeliveryDetailTableViewCell.swift in Sources */,
 				4AFCB3C5214FE7BB008F5B9A /* DeliveryModel+CoreDataClass.swift in Sources */,
 				4AFCB41C2153FAAF008F5B9A /* MapViewCellViewModelImp.swift in Sources */,
 				4AFCB396214F8750008F5B9A /* BaseUrl+Extension.swift in Sources */,
@@ -687,18 +719,24 @@
 				4AFCB4182153F906008F5B9A /* MapViewCellViewModel.swift in Sources */,
 				4AFCB3D321503B10008F5B9A /* DeliveryRepository.swift in Sources */,
 				4AFCB370214F84B9008F5B9A /* Delievery_Appliation.xcdatamodeld in Sources */,
+				4AFCB42A21541626008F5B9A /* DeliveryDetailViewModel.swift in Sources */,
 				4AFCB38E214F863A008F5B9A /* BaseUrl.swift in Sources */,
+				4AFCB42021540167008F5B9A /* DeliveryDetailViewList.swift in Sources */,
 				4AFCB3FB2152B3ED008F5B9A /* ContextFactory.swift in Sources */,
+				4AFCB42421541123008F5B9A /* DetailViewListModel.swift in Sources */,
 				4AFCB3ED21527007008F5B9A /* DeliveryServicesImp.swift in Sources */,
 				4AFCB3C4214FE7BB008F5B9A /* LocationModel+CoreDataProperties.swift in Sources */,
+				4AFCB42E215419CE008F5B9A /* DetailViewListModelBuilder.swift in Sources */,
 				4AFCB3C9215027FD008F5B9A /* Repository.swift in Sources */,
 				4AFCB3B1214FBBAD008F5B9A /* DeliveryResponse.swift in Sources */,
 				4AFCB4162153F737008F5B9A /* MapViewTableViewCell.swift in Sources */,
 				4AFCB3EB21526EF4008F5B9A /* DeliveryListViewModelImp.swift in Sources */,
+				4AFCB42621541202008F5B9A /* DeliveryDetailCellViewModelImp.swift in Sources */,
 				4AFCB3FE2152BB17008F5B9A /* Toast.swift in Sources */,
 				4AFCB398214F88AE008F5B9A /* API+Extension.swift in Sources */,
 				4AFCB3F42152A341008F5B9A /* DeliveryListViewModel.swift in Sources */,
 				4AFCB3A0214F8AD0008F5B9A /* LocationDTO.swift in Sources */,
+				4AFCB4222154110D008F5B9A /* DeliveryDetailCellViewModel.swift in Sources */,
 				4AFCB4102153BC54008F5B9A /* ShowMoreViewModel.swift in Sources */,
 				4AFCB392214F8690008F5B9A /* NetworkResult.swift in Sources */,
 				4AFCB41A2153F92A008F5B9A /* MapModel.swift in Sources */,
@@ -723,8 +761,10 @@
 				4AFCB3C3214FE7BB008F5B9A /* LocationModel+CoreDataClass.swift in Sources */,
 				4AFCB3F221529F2F008F5B9A /* DeliveryMapper.swift in Sources */,
 				4AFCB3E9215108B7008F5B9A /* DeliveryListTableViewCell.swift in Sources */,
+				4AFCB42C215416F0008F5B9A /* DeliveryDetailViewModelImp.swift in Sources */,
 				4AFCB3AB214FB027008F5B9A /* NetworkManager.swift in Sources */,
 				4AFCB3D721509989008F5B9A /* Extensions.swift in Sources */,
+				4AFCB43021541C66008F5B9A /* MapModelBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

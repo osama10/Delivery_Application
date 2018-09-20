@@ -36,7 +36,8 @@ class MapViewTableViewCell: UITableViewCell, Injectable {
             self.mapView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.mapView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.mapView.bottomAnchor.constraint(equalTo:self.bottomAnchor, constant: 0),
-            self.mapView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+            self.mapView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            self.mapView.heightAnchor.constraint(equalToConstant: UIScreen.height * 0.5)
             ])
     }
     

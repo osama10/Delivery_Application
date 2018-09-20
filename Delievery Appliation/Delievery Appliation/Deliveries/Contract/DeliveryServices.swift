@@ -9,8 +9,6 @@
 import Foundation
 typealias response  = ([DeliveryDTO], NetworkError?)->(Void)
 
-
-
 protocol DeliveryServices{
     
     var networkManager : NetworkManager { get }

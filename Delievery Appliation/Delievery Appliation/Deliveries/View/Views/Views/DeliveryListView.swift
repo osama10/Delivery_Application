@@ -11,7 +11,6 @@ import UIKit
 class DeliveryListView: UIView {
     lazy var descriptionLabel : UILabel = {
         let label = ViewsFactory.makeView(type: .lableView) as! UILabel
-        label.text = "Checking"
         label.textAlignment = .left
         label.numberOfLines = 2
         label.lineBreakMode = .byWordWrapping

@@ -14,6 +14,8 @@ enum Views{
     case lableView
     case imageView
     case deliveryListView
+    case deliveryDetailView
+    case separatorView
 }
 
 struct ViewsFactory {
@@ -29,7 +31,11 @@ struct ViewsFactory {
             view = (frame == nil) ? UIImageView() : UIImageView(frame: frame!)
         case .deliveryListView:
             view = (frame == nil) ? DeliveryListView() : DeliveryListView(frame: frame!)
-            
+        case .deliveryDetailView:
+            view = (frame == nil) ? DeliveryDetailViewList() : DeliveryDetailViewList(frame: frame!)
+        case .separatorView:
+            view = (frame == nil) ? UIView() : UIView(frame: frame!)
+
         }
         
         return view

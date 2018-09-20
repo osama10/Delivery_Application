@@ -26,4 +26,5 @@ protocol DeliveryListViewModel {
     func didTapOnList(at index : Int)
     func getDeliveryListCellViewModel(of index : Int)->DeliveryListTableCellViewModelImp
     func getShowMoreViewModel()->ShowMoreViewModel
+    func getDeliveryDetailViewModel(with data : DeliveryDTO)->DeliveryDetailViewModel
 }

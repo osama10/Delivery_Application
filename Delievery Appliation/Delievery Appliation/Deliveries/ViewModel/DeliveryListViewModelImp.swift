@@ -67,6 +67,12 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         let viewModel = ShowMoreViewModelImp(labelText: "Show More Deliveries")
         return viewModel
     }
+   
+    func getDeliveryDetailViewModel(with data : DeliveryDTO)->DeliveryDetailViewModel{
+        let viewModel = DeliveryDetailViewModelImp(deleivery: data)
+        return viewModel
+    }
+
     func showAlert(errorType : NetworkError){
         var title = ""
         var message = ""

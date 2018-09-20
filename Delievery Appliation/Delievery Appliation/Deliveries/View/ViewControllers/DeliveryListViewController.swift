@@ -32,6 +32,7 @@ class DeliveryListViewController: UIViewController, Injectable, AlertsPresentabl
         
     }
     
+    
     func inject(_ viewModel : DeliveryListViewModel) {
         self.viewModel = viewModel
     }
@@ -39,7 +40,8 @@ class DeliveryListViewController: UIViewController, Injectable, AlertsPresentabl
     private func initialSettings(){
         self.view.backgroundColor = .white
         self.title = self.viewModel.title
-        addTableView()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.addTableView()
     }
     
     private func addTableView(){
@@ -68,7 +70,9 @@ class DeliveryListViewController: UIViewController, Injectable, AlertsPresentabl
         
         self.viewModel.showDetailView = { [weak self] (delivery) in
             guard let `self` = self else { return }
-            
+            let detailVC = DeliveryDetailViewController()
+            detailVC.inject(self.viewModel.getDeliveryDetailViewModel(with: delivery))
+            self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
     

@@ -12,7 +12,8 @@ import CoreData
 struct Singleton {
     let networkManager : NetworkManager = AlamofireManager()
     let dbManager = CoreDataManger(context: ContextFacotry.makeContext(type: .parent))
-    
+    let googleMapsApiKey = "AIzaSyB8ONsesdHEFASjVfDA4gbNg3uvGAaYvwY"
+
    static var shared = {
         return Singleton()
     }()
