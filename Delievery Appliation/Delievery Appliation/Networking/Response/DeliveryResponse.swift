@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class DeliveryResponse : Response {
-    
-    var data: Any
-    init(data : Any) {
-        self.data = data
-    }
-    func map() -> [Mappable] {
-        let deleiveryJSON = self.data as! [[String : AnyObject]]
-        let data = Mapper<DeliveryDTO>().mapArray(JSONArray: deleiveryJSON)
-        print("count : \(data.count)")
-        return data
-    }
-    
-}
+//class DeliveryResponse : Response {
+//    
+//    var data: Any
+//    init(data : Any) {
+//        self.data = data
+//    }
+//    func map() -> [Mappable] {
+//        let deleiveryJSON = self.data as! [[String : AnyObject]]
+//        let data = Mapper<DeliveryDTO>().mapArray(JSONArray: deleiveryJSON)
+//        print("count : \(data.count)")
+//        return data
+//    }
+//    
+//}

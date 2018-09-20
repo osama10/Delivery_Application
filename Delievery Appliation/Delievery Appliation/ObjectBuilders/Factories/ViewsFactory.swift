@@ -16,9 +16,9 @@ enum Views{
     case deliveryListView
 }
 
-class ViewsFactory {
-   
-    class func makeView(type : Views, with frame : CGRect? = nil)->UIView{
+struct ViewsFactory {
+    
+    static func makeView(type : Views, with frame : CGRect? = nil)->UIView{
         var view : UIView!
         switch type {
         case .lableView:
@@ -29,7 +29,7 @@ class ViewsFactory {
             view = (frame == nil) ? UIImageView() : UIImageView(frame: frame!)
         case .deliveryListView:
             view = (frame == nil) ? DeliveryListView() : DeliveryListView(frame: frame!)
-
+            
         }
         
         return view

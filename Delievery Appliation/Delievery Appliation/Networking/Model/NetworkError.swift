@@ -11,4 +11,5 @@ import Foundation
 public enum NetworkError: Error {
     case requestCreation
     case server(Error)
+    case internetError(String)
 }

@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
-class DeliveryListTableViewCell: UITableViewCell {
-
+class DeliveryListTableViewCell: UITableViewCell, Injectable {
+    
     lazy var deliveryListView : DeliveryListView = {
-      return ViewsFactory.makeView(type: .deliveryListView) as! DeliveryListView
+        return ViewsFactory.makeView(type: .deliveryListView) as! DeliveryListView
     }()
     
-  
+    var viewModel : DeliveryListTableCellViewModel!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -27,19 +29,10 @@ class DeliveryListTableViewCell: UITableViewCell {
         self.layoutIfNeeded()
         
     }
-       
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       
-        // Initialization code
-    }
     
-  private  func addDeliveryListView(){
-    self.deliveryListView.translatesAutoresizingMaskIntoConstraints = false
+    private func addDeliveryListView(){
+        self.deliveryListView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.deliveryListView)
-//    self.deliveryListView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
-//    self.deliveryListView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10).isActive = true
-
         NSLayoutConstraint.activate([
             self.deliveryListView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.deliveryListView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
@@ -47,11 +40,21 @@ class DeliveryListTableViewCell: UITableViewCell {
             self.deliveryListView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
             ])
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    func inject(_ viewModel : DeliveryListTableCellViewModel) {
+        self.viewModel = viewModel
     }
+    
+    func populateData(){
+        self.deliveryListView.descriptionLabel.text = self.viewModel.delivery.description
 
+        let imageUrl = self.viewModel.delivery.imageUrl!
+        self.deliveryListView.deliveryImageView.sd_setShowActivityIndicatorView(true)
+        self.deliveryListView.deliveryImageView.sd_setIndicatorStyle(.gray)
+        self.deliveryListView.deliveryImageView.sd_setImage(with: URL(string:imageUrl ))
+        
+    }
+    
+    
 }

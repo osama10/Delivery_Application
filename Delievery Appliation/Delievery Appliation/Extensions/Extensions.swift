@@ -27,6 +27,10 @@ extension Double{
     var toInt : Int{
         return Int(self)
     }
+    
+    var toCGFloat : CGFloat{
+        return CGFloat(self)
+    }
 }
 
 extension String {

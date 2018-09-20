@@ -9,13 +9,14 @@
 import Foundation
 import CoreData
 
-class DeliveryRepository<D : CoreDataManger> : Repository{
+class DeliveryRepository :  Repository{
    
-    var dbManager : D
-    var entityName = "DeliveryModel"
+    var dbManager : CoreDataManger
+    var entityName : String
    
-    required init(dbManager : D) {
+    required init(dbManager : CoreDataManger, entityName : String) {
         self.dbManager = dbManager
+        self.entityName = entityName
     }
    
     func add(data: DeliveryDTO)->Bool{

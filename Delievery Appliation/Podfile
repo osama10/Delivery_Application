@@ -7,6 +7,7 @@ target 'Delievery Appliation' do
     pod 'GooglePlaces'
 	pod 'Alamofire', '~> 4.2.0'
     pod 'ObjectMapper', '~> 3.3'
-
+    pod 'SDWebImage'
 end
+
 

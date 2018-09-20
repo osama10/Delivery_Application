@@ -9,7 +9,6 @@
 import Foundation
 
 protocol NetworkManager {
-    
     func request<E: RequestProvider>(request: E,
                                       completion: @escaping ((NetworkResult<E.Response, NetworkError>) -> Void))
 }

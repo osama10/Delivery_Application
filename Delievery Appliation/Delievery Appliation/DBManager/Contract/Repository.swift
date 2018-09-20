@@ -9,10 +9,7 @@
 import Foundation
 
 protocol Repository{
-   
     associatedtype T
-    
-
     
     func add(data : T)->Bool
     func update(data : T)->Bool

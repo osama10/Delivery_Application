@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-class CoreDataManger : DBManager{
-
+class CoreDataManger{
+    
     var context : NSManagedObjectContext!
     
     init(context : NSManagedObjectContext) {
@@ -30,7 +30,6 @@ class CoreDataManger : DBManager{
         return objectSaved
     }
     
-   
     func fetchObject(_ entity : String ,  predicate : Predicate? = nil)->[NSManagedObject]?{
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)

@@ -59,3 +59,8 @@ protocol AlertsPresentable : class {     /**
      For Showing alert. It has a protocol extensions in extension file
      */
 }
+
+protocol ResponseMapper : class{
+    associatedtype response
+    static func map(data : Any)->[response]
+}

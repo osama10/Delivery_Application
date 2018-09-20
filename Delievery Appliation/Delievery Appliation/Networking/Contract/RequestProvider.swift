@@ -12,6 +12,6 @@ import Foundation
 import ObjectMapper
 
 public protocol RequestProvider {
-    typealias Response = [Mappable]
+    typealias Response = Any
     var request: Request{ get }
 }
