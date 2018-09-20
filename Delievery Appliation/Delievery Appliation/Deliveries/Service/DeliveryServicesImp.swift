@@ -9,7 +9,7 @@
 import Foundation
 
 class DeliveryServicesImp : DeliveryServices{
-
+    
     var networkManager: NetworkManager
     var deliveryRepository: DeliveryRepository
     
@@ -27,20 +27,39 @@ class DeliveryServicesImp : DeliveryServices{
     {
         self.networkManager.request(request: request) {  [weak self] (result) in
             guard let `self` = self else { return }
-
+            
             switch result{
             case .success(let data):
                 let deliveries = DeliveryMapper.map(data: data)
+                self.savingDelivierisHandler(deliveries: deliveries)
                 response(deliveries, nil)
             case .error(let error):
                 let deliveries = self.getDeliveriesFromLocalPersistance()
                 response(deliveries, error)
             }
-            
+        }
+    }
+    
+    func deleteAllDeliveries(){
+        let _ = self.deliveryRepository.deleteAll()
+    }
+    
+    func saveDeliveriesToLocalPersistence(deliveries : [DeliveryDTO]){
+        deliveries.forEach { (delivery) in
+            let _ = self.deliveryRepository.add(data: delivery)
         }
     }
     
     func getDeliveriesFromLocalPersistance() -> [DeliveryDTO] {
         return self.deliveryRepository.getAll()
+    }
+    
+    func savingDelivierisHandler(deliveries : [DeliveryDTO]){
+        if(deliveries.count > 0) {
+            if(deliveries.first?.id == 0){
+                self.deleteAllDeliveries()
+            }
+            self.saveDeliveriesToLocalPersistence(deliveries: deliveries)
+        }
     }
 }

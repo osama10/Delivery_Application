@@ -10,4 +10,6 @@ import Foundation
 
 protocol DeliveryListTableCellViewModel {
     var delivery : DeliveryDTO { get }
+    var fontSize : Double { get }
+
 }

@@ -13,6 +13,11 @@ import CoreData
 @objc(LocationModel)
 public class LocationModel: NSManagedObject {
     
+    @objc
+    private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+    
     init(context : NSManagedObjectContext ) {
         let entityDesc = NSEntityDescription.entity(forEntityName: "LocationModel", in: context)
         super.init(entity: entityDesc!, insertInto: context)

@@ -1,21 +1,20 @@
 //
-//  DeliveryListTableViewCell.swift
+//  ShowMoreListTableViewCell.swift
 //  Delievery Appliation
 //
-//  Created by Osama Bin Bashir on 18/09/2018.
+//  Created by Osama Bin Bashir on 20/09/2018.
 //  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import UIKit
-import SDWebImage
 
-class DeliveryListTableViewCell: UITableViewCell, Injectable {
-    
+class ShowMoreListTableViewCell: UITableViewCell, Injectable {
+
     lazy var deliveryListView : DeliveryListView = {
         return ViewsFactory.makeView(type: .deliveryListView) as! DeliveryListView
     }()
     
-    var viewModel : DeliveryListTableCellViewModel!
+    var viewModel : ShowMoreViewModel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,8 +25,9 @@ class DeliveryListTableViewCell: UITableViewCell, Injectable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addDeliveryListView()
         self.deliveryListView.setBorders()
-        self.deliveryListView.setDeliveryImageViewBorders()
-        self.deliveryListView.descriptionLabelFont  = UIFont.systemFont(ofSize: 16.0)
+        self.deliveryListView.setWidthOfImageView(width: 0.0)
+        self.deliveryListView.descriptionLabelFont  = UIFont.boldSystemFont(ofSize: 15.0)
+        self.deliveryListView.descriptionLabelTextAlignment = .center
         self.selectionStyle = .none
     }
     
@@ -35,27 +35,18 @@ class DeliveryListTableViewCell: UITableViewCell, Injectable {
         self.deliveryListView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.deliveryListView)
         NSLayoutConstraint.activate([
-            self.deliveryListView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.deliveryListView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             self.deliveryListView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.deliveryListView.bottomAnchor.constraint(equalTo:self.bottomAnchor, constant: -10),
+            self.deliveryListView.bottomAnchor.constraint(equalTo:self.bottomAnchor, constant:-5),
             self.deliveryListView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
             ])
     }
-    
-    
-    func inject(_ viewModel : DeliveryListTableCellViewModel) {
+
+    func inject(_ viewModel : ShowMoreViewModel){
         self.viewModel = viewModel
     }
     
     func populateData(){
-        self.deliveryListView.descriptionLabel.text = self.viewModel.delivery.description
-
-        let imageUrl = self.viewModel.delivery.imageUrl!
-        self.deliveryListView.deliveryImageView.sd_setShowActivityIndicatorView(true)
-        self.deliveryListView.deliveryImageView.sd_setIndicatorStyle(.gray)
-        self.deliveryListView.deliveryImageView.sd_setImage(with: URL(string:imageUrl ))
-        
+        self.deliveryListView.descriptionLabel.text = self.viewModel.labelText
     }
-    
-    
 }

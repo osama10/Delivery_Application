@@ -10,7 +10,9 @@ import Foundation
 
 struct DeliveryListTableCellViewModelImp : DeliveryListTableCellViewModel {
     var delivery: DeliveryDTO
-    
+    var fontSize: Double{
+        return 18.0
+    }
     init(delivery : DeliveryDTO) {
         self.delivery = delivery
     }
