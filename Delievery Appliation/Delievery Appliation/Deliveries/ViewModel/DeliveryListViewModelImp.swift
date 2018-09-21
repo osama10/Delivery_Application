@@ -14,7 +14,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
     var totalRows: Int {
         return self.calculateTotalRows()
     }
-  
+    
     var title: String{
         return "Delivery List"
     }
@@ -67,12 +67,12 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         let viewModel = ShowMoreViewModelImp(labelText: "Show More Deliveries")
         return viewModel
     }
-   
+    
     func getDeliveryDetailViewModel(with data : DeliveryDTO)->DeliveryDetailViewModel{
         let viewModel = DeliveryDetailViewModelImp(deleivery: data)
         return viewModel
     }
-
+    
     func showAlert(errorType : NetworkError){
         var title = ""
         var message = ""
@@ -82,7 +82,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
             message = "Internet not found"
         default:
             title = "Error"
-            message = "Deliveries request failed"
+            message = "Something bad happened . Please try again"
         }
         
         self.showAlert?(title,message)
@@ -96,25 +96,10 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
             print(self.deliveries?.count)
             self.populateData?()
             self.animateLoader?(false)
+            
         }
     }
-   
-    private func responseHandler(data : [DeliveryDTO], error : NetworkError?){
-        if(error != nil){
-            self.showAlert(errorType: error!)
-            self.deliveries = data
-        }else if(isRefreshed){
-            deliveries?.removeAll()
-            deliveries = data
-        }else{
-            if(data.count == 0 || data.count % 20 > 0){
-                doesAllDeliveriesAreFetched = true
-            }else{
-                offset += 20
-            }
-            (deliveries == nil) ? deliveries = data : deliveries?.append(contentsOf: data)
-        }
-    }
+    
     
     private func calculateTotalRows()->Int{
         var totalRows = 0
@@ -122,6 +107,37 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
             totalRows = (doesAllDeliveriesAreFetched) ? deliveries.count : deliveries.count + 1
         }
         return totalRows
+    }
+    
+    private func responseHandler(data : [DeliveryDTO], error : NetworkError?){
+        if(error != nil){
+            self.handleErrorCase(data: data, error: error!)
+        }else if(isRefreshed){
+            self.handlePullToRefreshCase(data: data)
+        }else{
+            self.handlePullToRefreshCase(data: data)
+        }
+    }
+    
+    private func handleErrorCase(data : [DeliveryDTO], error : NetworkError){
+        self.showAlert(errorType: error)
+        self.deliveries = data
+    }
+    
+    private func handlePullToRefreshCase(data : [DeliveryDTO]){
+        isRefreshed = false
+        doesAllDeliveriesAreFetched = false
+        deliveries?.removeAll()
+        deliveries = data
+    }
+    
+    private func handleSuccesfullRequestCase(data : [DeliveryDTO]){
+        if(data.count == 0 || data.count % 20 > 0){
+            doesAllDeliveriesAreFetched = true
+        }else{
+            offset += 20
+        }
+        (deliveries == nil) ? deliveries = data : deliveries?.append(contentsOf: data)
     }
 }
 
