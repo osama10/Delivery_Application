@@ -99,6 +99,4 @@ class DeliveryRepository :  Repository{
     
 }
 
-//class MockDelivery : DeliveryRepository<CoreDataManger>{
-//
-//}
+

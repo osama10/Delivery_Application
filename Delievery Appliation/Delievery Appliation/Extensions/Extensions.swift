@@ -78,78 +78,11 @@ extension UIFont{
 
     }
 }
-extension UIStoryboard {
-    /**
-     - Storyboard : enum for saving storyboard name
-     - storyboard : initialise storyboard
-     */
-    enum Storyboard: String {
-        case main
-        var filename: String {
-            return rawValue.capitalized
-        }
-    }
-    
-    class func storyboard(storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
-        return UIStoryboard(name: storyboard.filename, bundle: bundle)
-    }
-    
-}
-
-extension StoryboardInitializable where Self: UIViewController {
-    /**
-     define in protocol file
-     
-     */
-    
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-    
-    static var storyboardName: UIStoryboard.Storyboard {
-        return UIStoryboard.Storyboard.main
-    }
-    static func instantiateViewController() -> Self {
-        let storyboard = UIStoryboard.storyboard(storyboard: storyboardName)
-        return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
-        
-    }
-}
-
-extension NibLoadableView where Self : UIView {
-    /**
-     - nibName : Nib name
-     - loadNib - for loading Nib
-     
-     */
-    static var nibName : String {
-        return String(describing: self).components(separatedBy: ".").last!
-    }
-    static func loadNib() -> Self {
-        let bundle = Bundle(for:Self.self)
-        let nib = UINib(nibName: Self.nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as! Self
-    }
-}
 
 extension UITableView {
     /**
-     - register : for registring TableViewCell from nib
-     - dequeResuseableCell - type safe dequeReuseableCell
      - setdelegateAndDatasource - for setting delegate and datasource for view and viewcontroller
-     
      */
-    func register<T:UITableViewCell>(_ : T.Type) where T : ReusableView , T : NibLoadableView{
-        let nib = UINib(nibName: T.nibName, bundle: nil)
-        register(nib, forCellReuseIdentifier: T.reuseIdentifier)
-    }
-    
-    func dequeResuseableCell<T:UITableViewCell>(for indexPath : IndexPath)->T where T : ReusableView{
-        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else{
-            fatalError("Couldn't cast cell in \(T.reuseIdentifier)")
-        }
-        return cell
-    }
     
     func setdelegateAndDatasource(for viewController : UIViewController){
         self.delegate = viewController as? UITableViewDelegate
@@ -173,15 +106,6 @@ extension AlertsPresentable where Self : UIViewController {
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
         
-    }
-}
-
-extension ReusableView where Self : UIView {
-    /**
-     - reuseIdentifier : Gets reuseIdentifier by taking the name of class
-     */
-    static var reuseIdentifier : String {
-        return String(describing: self).components(separatedBy: ".").last!
     }
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-protocol Response : class{
-    var data : Any { get }
-    func map()->[Mappable]
+protocol ResponseMapper : class{
+    associatedtype response
+    static func map(data : Any)->[response]
 }

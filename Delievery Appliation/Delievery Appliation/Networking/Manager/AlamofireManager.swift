@@ -34,8 +34,7 @@ class AlamofireManager : NetworkManager {
                         let response  : E.Response = data
                         completion(.success(response))
                     }
-                    
-            }
+                }
         }else{
            
             completion(.error(NetworkError.internetError("No Internet Conncection")))
