@@ -13,13 +13,13 @@ class MockFailureDeliveryServices : DeliveryServices{
     
     var deliveryRepository: DeliveryRepository
     
-    init(deliveryRepository : DeliveryRepository, networkManager : NetworkManager) {
-        self.deliveryRepository = deliveryRepository
-        self.networkManager = networkManager
+    init(){
+        self.deliveryRepository = MockDeliveryRepository()
+        self.networkManager = MockSuccessNetworkManager()
     }
     
     func getDeliveries(request: DeliveryRequest, response: @escaping response) {
-        response([], nil)
+        response([], NetworkError.requestCreation)
     }
     
     
