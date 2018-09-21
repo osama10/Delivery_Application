@@ -9,14 +9,10 @@
 import Foundation
 
 class DeliveryDetailViewModelImp: DeliveryDetailViewModel {
-    var totalRows: Int{
-        return 4
-    }
-    
+    var totalRows: Int{ return 4 }
     var deleivery: DeliveryDTO
-    var title : String{
-        return "Delivery Details"
-    }
+    var title : String{ return "Delivery Details" }
+   
     init(deleivery : DeliveryDTO) {
         self.deleivery = deleivery
     }
@@ -34,6 +30,7 @@ class DeliveryDetailViewModelImp: DeliveryDetailViewModel {
     
     func getDeliveryDetailListModelDescription(type : DetailViewListType)->String{
         var desc = ""
+       
         switch type {
         case .heading:
             desc = "Order Id : \(self.deleivery.id!)"
@@ -42,13 +39,12 @@ class DeliveryDetailViewModelImp: DeliveryDetailViewModel {
         case .address:
             desc = (self.deleivery.location?.address!)!
         }
-        
         return desc
     }
     
     func getMapViewModel() -> MapViewCellViewModel {
         let data = MapModelBuilder()
-            .withTitle(title: "Order ID : \(self.deleivery.id!)")
+            .withTitle(title: "Order Id : \(self.deleivery.id!)")
             .withSnippet(snippet: (self.deleivery.location?.address)!)
             .withPosition(lat: (self.deleivery.location?.lat!)!, lng: (self.deleivery.location?.lng!)!)
             .withZoom(zoom: 17.0)

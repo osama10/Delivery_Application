@@ -10,7 +10,6 @@ import Foundation
 
 class MapViewCellViewModelImp : MapViewCellViewModel{
     var mapData: MapModel
-    
     init(mapData : MapModel) {
         self.mapData = mapData
     }

@@ -11,13 +11,8 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
     
     var deliveryService: DeliveryServices
     var deliveries: [DeliveryDTO]?
-    var totalRows: Int {
-        return self.calculateTotalRows()
-    }
-    
-    var title: String{
-        return "Delivery List"
-    }
+    var totalRows: Int { return self.calculateTotalRows() }
+    var title: String{ return "Delivery List" }
     var offset = 0
     var limit = 20
     var doesAllDeliveriesAreFetched = false
@@ -34,7 +29,6 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
     
     func didTapOnList(at index: Int) {
         (index == deliveries?.count) ? self.didTapOnShowMore() : self.showDetailView?(deliveries![index])
-        
     }
     
     func getCellHeight(of index: Int) -> Double {
@@ -58,7 +52,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         self.getDeliveries()
     }
     
-    func getDeliveryListCellViewModel(of index: Int) -> DeliveryListTableCellViewModelImp {
+    func getDeliveryListCellViewModel(of index: Int) -> DeliveryListTableCellViewModel {
         let viewModel = DeliveryListTableCellViewModelImp(delivery: deliveries![index])
         return viewModel
     }
@@ -93,10 +87,8 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         self.deliveryService.getDeliveries(request: request) { [weak self] (data, error) -> (Void) in
             guard let `self` = self else { return }
             self.responseHandler(data: data, error: error)
-            print(self.deliveries?.count)
             self.populateData?()
             self.animateLoader?(false)
-            
         }
     }
     

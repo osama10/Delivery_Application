@@ -24,7 +24,7 @@ protocol DeliveryListViewModel {
     func refreshData()
     func getCellHeight(of index : Int)->Double
     func didTapOnList(at index : Int)
-    func getDeliveryListCellViewModel(of index : Int)->DeliveryListTableCellViewModelImp
+    func getDeliveryListCellViewModel(of index : Int)->DeliveryListTableCellViewModel
     func getShowMoreViewModel()->ShowMoreViewModel
     func getDeliveryDetailViewModel(with data : DeliveryDTO)->DeliveryDetailViewModel
 }
