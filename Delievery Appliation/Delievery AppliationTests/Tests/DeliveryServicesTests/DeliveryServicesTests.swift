@@ -10,6 +10,7 @@ import XCTest
 @testable import DeliveryApplication
 
 class DeliveryServicesTests: XCTestCase {
+    
     var deliveryService : DeliveryServices!
     var data : [DeliveryDTO]!
     var mockRequest : DeliveryRequest!
@@ -18,7 +19,6 @@ class DeliveryServicesTests: XCTestCase {
         super.setUp()
         data = []
         mockRequest = DeliveryRequest(offset: 0, limit: 20)
-        
     }
     
     override func tearDown() {

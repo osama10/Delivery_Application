@@ -79,7 +79,7 @@ class DeliveryRepository :  Repository{
     
     func contains(data: DeliveryDTO)->DeliveryDTO?{
         let format = "%k == %@"
-        let arguments : [Any] = ["uid" , String(data.id!)]
+        let arguments : [Any] = ["id" , String(data.id!)]
         let predicate = Predicate(format: format, arguments: arguments)
         var deliveryDTO : DeliveryDTO?
         
@@ -88,7 +88,7 @@ class DeliveryRepository :  Repository{
             let locationDTO = LocationDTO(lat: (dataModel.location?.lat)!,
                                           lng: (dataModel.location?.lng)!,
                                           address: (dataModel.location?.address)!
-            )
+                              )
             
             deliveryDTO = DeliveryDTO(id: dataModel.id!.toInt, description: dataModel.desc!, imageUrl: dataModel.imageUrl!, location: locationDTO)
             

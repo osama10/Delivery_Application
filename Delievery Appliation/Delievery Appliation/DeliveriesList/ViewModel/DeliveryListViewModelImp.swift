@@ -14,7 +14,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
     var totalRows: Int { return self.calculateTotalRows() }
     var title: String{ return "Delivery List" }
     var offset = 0
-    var limit = 20
+    let limit = 20
     var doesAllDeliveriesAreFetched = false
     var isRefreshed = false
     
@@ -121,14 +121,14 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         doesAllDeliveriesAreFetched = false
         deliveries?.removeAll()
         deliveries = data
-        offset += 20
+        offset += limit
     }
     
     private func handleSuccesfullRequestCase(data : [DeliveryDTO]){
-        if(data.count == 0 || data.count % 20 > 0){
+        if(data.count == 0 || data.count % limit > 0){
             doesAllDeliveriesAreFetched = true
         }else{
-            offset += 20
+            offset += limit
         }
         (deliveries == nil) ? deliveries = data : deliveries?.append(contentsOf: data)
     }

@@ -1,6 +1,6 @@
 platform :ios, '10.0'
 
-target 'Delievery Appliation' do
+target 'DeliveryApplication' do
 
   use_frameworks!
     pod 'GoogleMaps'
