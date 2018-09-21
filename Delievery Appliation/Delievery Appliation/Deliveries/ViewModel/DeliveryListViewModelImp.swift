@@ -79,10 +79,10 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         switch errorType {
         case .internetError( _):
             title = "Network Error"
-            message = "Internet not found"
+            message = "Internet not found. Showing last fetched deliveries"
         default:
-            title = "Error"
-            message = "Something bad happened . Please try again"
+            title = "Deliveries fetching failed"
+            message = "Something bad happened . Showing last fetched deliveries"
         }
         
         self.showAlert?(title,message)
@@ -115,7 +115,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         }else if(isRefreshed){
             self.handlePullToRefreshCase(data: data)
         }else{
-            self.handlePullToRefreshCase(data: data)
+            self.handleSuccesfullRequestCase(data: data)
         }
     }
     
@@ -129,6 +129,7 @@ class DeliveryListViewModelImp : DeliveryListViewModel {
         doesAllDeliveriesAreFetched = false
         deliveries?.removeAll()
         deliveries = data
+        offset += 20
     }
     
     private func handleSuccesfullRequestCase(data : [DeliveryDTO]){
