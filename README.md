@@ -1,4 +1,5 @@
 # Delivery Application
+A sample project where I have implemented a network layer, repository pattern for local persistence, create UI with code and clean architecture
 
 ## How to run the project
   Please run **pod install** before running the project . You may need to update your pod too if you have an older version . For that use **pod repo update**  
